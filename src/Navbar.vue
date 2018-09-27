@@ -16,16 +16,32 @@
   </section>  
 </template>
 
-<style scoped>
+<style>
+* {
+  font-family: Nunito;
+ 
+}
+body{
+  margin: 0;
+  padding: 0;
+}
 .nav {
   text-decoration: none;
-  padding: 2%;
+  padding: 3%;
+  font-size: 1.4rem;
+  color: black;
+  transition: color 0.2s;
+  font-weight: bold;
+}
+.nav:hover {
+  color: #fff200;
 }
 .nav-bar {
   display: flex;
   justify-content: space-between;
   border-top: 5px solid yellow;
   border-bottom: 5px solid yellow;
+  margin-top: 8px;
 }
 img {
   width: 100%;
@@ -33,5 +49,8 @@ img {
 }
 .nav-logo {
   width: 25%;
+}
+.nav-links {
+  padding: 3%;
 }
 </style>
