@@ -1,6 +1,10 @@
 <template>
 <section>
-  <h1>This is a home page</h1>
+  <img src="../assets/trendhaus-images/main-img.webp" alt="main-image" class="main-image">
+  <div class="main-image-text">
+    
+  </div>
+  <h1>Aktuelle Objekte</h1>
   
 </section>
 </template>
@@ -16,3 +20,12 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.main-image{
+
+}
+
+
+</style>
+

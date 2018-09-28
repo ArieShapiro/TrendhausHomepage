@@ -1,8 +1,8 @@
 <template>
   <section>
-    <div class="nav-bar">
+    <div class="nav-bar animated fadeInDown">
       <div class="nav-logo">
-        <img src="@/assets/trendhaus-logo.webp" alt="">
+        <img src="@/assets/trendhaus-logo.webp" alt="logo">
       </div>
       <div class="nav-links">
         <router-link class="nav" to="/">Unternehmen</router-link> 
@@ -41,7 +41,7 @@ body{
   justify-content: space-between;
   border-top: 5px solid yellow;
   border-bottom: 5px solid yellow;
-  margin-top: 8px;
+  margin: 8px 0;
 }
 img {
   width: 100%;
@@ -49,6 +49,9 @@ img {
 }
 .nav-logo {
   width: 25%;
+}
+.nav-logo:hover{
+  cursor: pointer;
 }
 .nav-links {
   padding: 3%;
