@@ -9,7 +9,7 @@
         <router-link class="nav" to="/about">Projekte</router-link>
         <router-link class="nav" to="/about">Investments</router-link>
         <router-link class="nav" to="/about">Partners</router-link>
-        <router-link class="nav" to="/about">Kontakt</router-link>
+        <router-link class="nav" to="/"><a class="nav" href="#contact">Kontakt</a></router-link>
       </div>
     </div>
     <router-view/>

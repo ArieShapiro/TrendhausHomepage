@@ -5,6 +5,10 @@
     
   </div>
   <h1>Aktuelle Objekte</h1>
+
+  <section id="contact">
+
+  </section>
   
 </section>
 </template>
