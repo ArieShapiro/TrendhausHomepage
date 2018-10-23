@@ -7,10 +7,16 @@
       <div class="nav-links">
         <a class="nav unternehmen" >Unternehmen</a> 
         <div class="nav unternehmen-dropdown">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
+          <a href="#">TEAM</a>
+          <a href="#">AKTUELLES</a>
         </div>
-        <router-link class="nav" to="/about">Projekte</router-link>
+        <router-link class="nav projekte" to="/about">Projekte</router-link>
+        <div class="nav projekte-dropdown">
+          <a href="#">FERTIGGESTELLTE PROJEKTE</a>
+          <a href="#">PROJEKTE IN BAU</a>
+          <a href="#">PROJEKTE IN PLANUNG</a>
+          <a href="#">REFERENZEN</a>
+        </div>
         <router-link class="nav" to="/about">Investments</router-link>
         <router-link class="nav" to="/about">Partners</router-link>
           <a class="nav" href="#contact">Kontakt</a>
@@ -28,14 +34,18 @@ body {
   margin: 0;
   padding: 0;
 }
-.nav, .unternehmen-dropdown a {
+.nav,
+.unternehmen-dropdown,
+.projekte-dropdown {
   text-decoration: none;
   padding: 3%;
   font-size: 1.4rem;
   color: black;
   transition: color 0.2s;
 }
-.nav:hover, .unternehmen-dropdown a:hover {
+.nav:hover,
+.unternehmen-dropdown a:hover,
+.projekte-dropdown a:hover {
   color: #fff200;
 }
 .nav-bar {
@@ -60,7 +70,8 @@ img {
   padding: 3%;
 }
 
-.unternehmen-dropdown {
+.unternehmen-dropdown,
+.projekte-dropdown {
   display: none;
   position: absolute;
   background-color: #ffffff;
@@ -70,7 +81,20 @@ img {
   padding: 0% 3% 0% 3%;
 }
 
-.unternehmen-dropdown a {
+.unternehmen-dropdown {
+  font-size: 1em;
+  padding: 0;
+  left: 515px;
+}
+.projekte-dropdown {
+  right: 349px;
+  font-size: 1em;
+  width: 195px;
+  padding: 0;
+}
+
+.unternehmen-dropdown a,
+.projekte-dropdown a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
@@ -78,12 +102,16 @@ img {
   text-align: left;
 }
 
-.unternehmen:hover ~ .unternehmen-dropdown{
-  display: block
+.unternehmen:hover ~ .unternehmen-dropdown {
+  display: block;
 }
-
-.unternehmen-dropdown:hover{
-  display: block
+.unternehmen-dropdown:hover {
+  display: block;
 }
-
+.projekte:hover ~ .projekte-dropdown {
+  display: block;
+}
+.projekte-dropdown:hover {
+  display: block;
+}
 </style>
