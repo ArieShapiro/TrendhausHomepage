@@ -84,7 +84,7 @@ img {
 .unternehmen-dropdown {
   font-size: 1em;
   padding: 0;
-  left: 515px;
+  left: 865px;
 }
 .projekte-dropdown {
   right: 349px;
