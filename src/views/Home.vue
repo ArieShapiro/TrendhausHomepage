@@ -83,6 +83,8 @@
 
   </section>
 
+  <SchlusselZumErfolg></SchlusselZumErfolg>
+
 
   <section id="contact">
     <h1>Contact Section</h1>
@@ -93,12 +95,12 @@
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import SchlusselZumErfolg from "@/components/SchlusselZumErfolg.vue";
 
 export default {
   name: "home",
   components: {
-    HelloWorld
+    SchlusselZumErfolg
   }
 };
 </script>
@@ -106,20 +108,20 @@ export default {
 <style lang="scss" scoped>
 .main-image {
 }
-.main-image-text {
+.main-image-text:not(h1) {
   width: 356px;
   height: 296px;
   padding: 1%;
-  background-color: #7d7973;
+  background-color: rgba(123, 118, 113, 0.6);
   color: white;
   border: 2px solid yellow;
   position: absolute;
   bottom: 100px;
   right: 10%;
-  opacity: 0.6;
   h1 {
   }
 }
+
 
 .aktuelle-objekte-headline {
   text-align: center;
@@ -146,13 +148,18 @@ export default {
     .aktuelle-objekt-info {
       position: relative;
       bottom: 16%;
-      p{
+      p {
         height: 130px;
       }
       button {
         background-color: white;
         border: 2px solid;
         padding: 3% 7%;
+        transition: color 0.2s;
+        &:hover{
+          -webkit-text-fill-color: #fff200;
+          cursor: pointer;
+        }
       }
     }
   }
