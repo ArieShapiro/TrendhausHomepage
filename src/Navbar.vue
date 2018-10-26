@@ -1,9 +1,10 @@
 <template>
   <section>
-    <div class="nav-bar animated fadeInDown">
-      <div class="nav-logo">
+    <div class="navbar-container">
+       <div class="nav-bar animated fadeInDown">
+      <router-link class="nav-logo" to="/">
         <img src="@/assets/trendhaus-logo.webp" alt="logo">
-      </div>
+      </router-link>
       <div class="nav-links">
         <a class="nav unternehmen" >Unternehmen</a> 
         <div class="nav unternehmen-dropdown">
@@ -22,6 +23,9 @@
           <a class="nav" href="#contact">Kontakt</a>
       </div>
     </div>
+    <div class="white-border-bottom"></div>
+    </div>      
+    
     <router-view/>
   </section>  
 </template>
@@ -48,19 +52,31 @@ body {
 .projekte-dropdown a:hover {
   color: #fff200;
 }
+
+.navbar-container {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+}
 .nav-bar {
   display: flex;
   justify-content: space-between;
   border-top: 5px solid yellow;
   border-bottom: 5px solid yellow;
-  margin: 8px 0;
+  margin: 8px 0 0;
 }
+.white-border-bottom{
+  height: 8px;
+}
+
 img {
   width: 100%;
   height: auto;
 }
 .nav-logo {
   width: 25%;
+  padding: 5px 0 5px 20px;
 }
 .nav-logo:hover {
   cursor: pointer;
