@@ -49,24 +49,32 @@
 
       <h1>Unsere Kompetenzen</h1>
 
-      <div class="kompetenz">
-        <h2></h2>
-        <p></p>
-      </div>
+      <div class="kompetenzen-conteiner">      
 
-      <div class="kompetenz">
-        <h2></h2>
-        <p></p>
-      </div>
+        <div class="kompetenz">
+          <i class="far fa-map"></i>
+          <h2>Planung</h2>
+          <p>Unsere Architekten legen bei der Entwicklung innovativer Wohnimmobilien großen Wert auf Nachhaltigkeit und Funktionalität zu leistbaren Preisen.</p>
+        </div>
 
-      <div class="kompetenz">
-        <h2></h2>
-        <p></p>
-      </div>
+        <div class="kompetenz">
+          <i class="fas fa-clipboard-list"></i>
+          <h2>Errichtung</h2>
+          <p>Unsere Bauabteilung errichtet ganzheitliche Wohnprojekte in Österreich und ganz Europa – von Grundsteinlegung bis zur Fertigstellung.</p>
+        </div>
 
-      <div class="kompetenz">
-        <h2></h2>
-        <p></p>
+        <div class="kompetenz">
+          <i class="fas fa-business-time"></i>
+          <h2>Vertrieb</h2>
+          <p>Ob Anleger oder Eigennutzer, ob Familie oder Single – unser Team unterstützt Sie dabei, Ihren Wohntraum in die Realität umzusetzen und steht Ihnen in allen Fragen zur Verfügung.</p>
+        </div>
+
+        <div class="kompetenz">
+          <i class="fas fa-home"></i>
+          <h2>Hausverwaltung</h2>
+          <p>Wir sind auch nach dem Kauf für Sie da! Unsere Mitarbeiter der Hausverwaltung betreuen Sie in Ihrer neuen Wohnumgebung und gehen gerne auf Ihre Anliegen ein.</p>
+        </div>
+
       </div>
 
     </section>
@@ -137,8 +145,14 @@ export default {};
   }
 }
 
-.unsere-kompetenzen{
-
+.unsere-kompetenzen {
+  h1 {
+    text-align: center;
+    font-size: 2em;
+  }
+  .kompetenzen-conteiner {
+    display: flex;
+  }
 }
 </style>
  
