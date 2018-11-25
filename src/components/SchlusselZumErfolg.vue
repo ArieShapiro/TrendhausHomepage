@@ -136,7 +136,7 @@ export default {};
   img {
     width: 410px;
     height: 410px;
-    outline: 3px solid #e8e04d;
+    outline: 3px solid white;
     outline-offset: -11px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16),
       0 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -152,6 +152,23 @@ export default {};
   }
   .kompetenzen-conteiner {
     display: flex;
+    margin: 0 10% 0;
+    .kompetenz {
+      i {
+        display: block;
+        margin: auto;
+        text-align: center;
+        color: #eeee00;
+        font-size: 4em;
+      }
+      h2{
+        text-align: center;
+      }
+      p{
+        text-align: center;
+        margin: 0 15% 0;
+      }
+    }
   }
 }
 </style>
