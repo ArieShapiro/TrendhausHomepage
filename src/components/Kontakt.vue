@@ -1,13 +1,9 @@
 <template>
-
   <section id="contact">
-
     <h1>Contact Section</h1>
 
     <div class="contact-container">
-
       <section class="contact-left">
-
         <h1>here the Google Map goes</h1>
 
         <h2>Besuchen Sie uns!</h2>
@@ -29,44 +25,29 @@
           <p>Fax: +43 1 23 61 771</p>
           <p>Email: office@trendhaus.eu</p>
         </div>
-
       </section>
 
       <section class="contact-right">
-
         <h1>Wir freuen uns auf Ihre Anfrage!</h1>
 
         <p>Bitte schreiben Sie uns Ihre Nachricht in das Kontaktformular</p>
         <p>oder rufen Sie uns an.</p>
         <p>Wir melden uns so schnell wie möglich bei Ihnen.</p>
 
-             <form action="">
-
-               <div class="label-input-container">
-                <label for="name">Name</label>
-                <input type="text" name="name" class="inputted-name" required>
-               </div>
-
-               <div class="label-input-container">
-                <label for="email">Email Address</label>
-                <input type="email" name="email" class="inputted-email" required>
-               </div>
-
-               <div class="label-input-container">
-                <label for="Message">Message</label>
-                <textarea type="text" name="message" class="inputted-message"></textarea>
-               </div>
-
-               <input type="submit" value="send">
-
-             </form>
-
+        <form action>
+          <input type="text" name="name" placeholder="Name" required>
+          
+          <input type="email" name="email" placeholder="Email Adresse" required>
+          
+          <input type="text" name="subject" placeholder="Betreff" required>
+          
+          <textarea type="text" name="message" placeholder="Nachricht"></textarea>
+          
+          <input type="submit" value="Senden">
+        </form>
       </section>
-
     </div>
-    
   </section>
-    
 </template>
 
 <script>
@@ -92,6 +73,29 @@ export default {};
     .tel-fax-email {
       margin: 10% 0;
       line-height: 50%;
+    }
+  }
+  .contact-right{
+    form{
+      display: flex;
+      flex-direction: column;
+      input, textarea{
+        margin-bottom: 6px;
+        border: none;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+      input{
+        height: 35px;
+      }
+      textarea{
+        height: 130px;
+      }
+      input[type="submit"]{
+        width: 66px;
+        height: 35px;
+        background-color: rgba(255, 242, 0, 1);
+        color: #3B3A3A;
+      }
     }
   }
 }
