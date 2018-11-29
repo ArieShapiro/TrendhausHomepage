@@ -4,9 +4,7 @@
 
     <div class="contact-container">
       <section class="contact-left">
-        <h1>here the Google Map goes</h1>
-
-        <h2>Besuchen Sie uns!</h2>
+        <div id="googleMap" style="width:100%;height:400px;"></div>
 
         <h3>Besuchen Sie uns!</h3>
 
@@ -14,6 +12,7 @@
         <p>Freitag: 9:00-14:00 Uhr</p>
 
         <div class="adress">
+          <i class="fas fa-map-marker-alt"></i>
           <p>Trendhaus-Gruppe</p>
           <p>Biberhaufenweg 10/1/7</p>
           <p>1220 Wien</p>
@@ -21,13 +20,18 @@
         </div>
 
         <div class="tel-fax-email">
+          <i class="fas fa-phone"></i>
           <p>Telefon: +43 1 26 36 770</p>
+
           <p>Fax: +43 1 23 61 771</p>
+
+          <i class="fas fa-at"></i>
           <p>Email: office@trendhaus.eu</p>
         </div>
       </section>
 
       <section class="contact-right">
+
         <h1>Wir freuen uns auf Ihre Anfrage!</h1>
 
         <p>Bitte schreiben Sie uns Ihre Nachricht in das Kontaktformular</p>
@@ -35,6 +39,7 @@
         <p>Wir melden uns so schnell wie möglich bei Ihnen.</p>
 
         <form action>
+
           <input type="text" name="name" placeholder="Name" required>
           
           <input type="email" name="email" placeholder="Email Adresse" required>
@@ -44,6 +49,7 @@
           <textarea type="text" name="message" placeholder="Nachricht"></textarea>
           
           <input type="submit" value="Senden">
+
         </form>
       </section>
     </div>
@@ -51,7 +57,26 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {};
+  },
+  methods: {
+    myMap() {
+      var mapProp = {
+        center: new google.maps.LatLng(51.508742, -0.12085),
+        zoom: 5
+      };
+      var map = new google.maps.Map(
+        document.getElementById("googleMap"),
+        mapProp
+      );
+    }
+  },
+  mounted() {
+    this.myMap();
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -66,6 +91,7 @@ export default {};
     justify-content: space-around;
   }
   .contact-left {
+    width: 30%;
     .adress {
       margin: 10% 0;
       line-height: 50%;
@@ -74,27 +100,40 @@ export default {};
       margin: 10% 0;
       line-height: 50%;
     }
+    i {
+      position: relative;
+      right: 30px;
+      top: 28px;
+      font-size: 1.3em;
+    }
   }
-  .contact-right{
-    form{
+  .contact-right {
+    form {
       display: flex;
       flex-direction: column;
-      input, textarea{
+      input,
+      textarea {
         margin-bottom: 6px;
         border: none;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
       }
-      input{
+      input {
         height: 35px;
       }
-      textarea{
+      textarea {
         height: 130px;
       }
-      input[type="submit"]{
+      input[type="submit"] {
         width: 66px;
         height: 35px;
         background-color: rgba(255, 242, 0, 1);
-        color: #3B3A3A;
+        color: #3b3a3a;
+        &:hover{
+          cursor: pointer;
+          background-color:#d6cc15; 
+          box-shadow: none;
+        }
       }
     }
   }
