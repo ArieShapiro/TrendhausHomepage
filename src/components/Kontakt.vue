@@ -31,7 +31,6 @@
       </section>
 
       <section class="contact-right">
-
         <h1>Wir freuen uns auf Ihre Anfrage!</h1>
 
         <p>Bitte schreiben Sie uns Ihre Nachricht in das Kontaktformular</p>
@@ -39,7 +38,6 @@
         <p>Wir melden uns so schnell wie möglich bei Ihnen.</p>
 
         <form action>
-
           <input type="text" name="name" placeholder="Name" required>
           
           <input type="email" name="email" placeholder="Email Adresse" required>
@@ -49,7 +47,6 @@
           <textarea type="text" name="message" placeholder="Nachricht"></textarea>
           
           <input type="submit" value="Senden">
-
         </form>
       </section>
     </div>
@@ -64,13 +61,16 @@ export default {
   methods: {
     myMap() {
       var mapProp = {
-        center: new google.maps.LatLng(51.508742, -0.12085),
-        zoom: 5
+        center: new google.maps.LatLng(48.2159300, 16.4801521, 15),
+        zoom: 13
       };
-      var map = new google.maps.Map(
-        document.getElementById("googleMap"),
-        mapProp
-      );
+      var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(48.2159300, 16.4825521, 15)
+      });
+
+      marker.setMap(map);
     }
   },
   mounted() {
@@ -129,9 +129,9 @@ export default {
         height: 35px;
         background-color: rgba(255, 242, 0, 1);
         color: #3b3a3a;
-        &:hover{
+        &:hover {
           cursor: pointer;
-          background-color:#d6cc15; 
+          background-color: #d6cc15;
           box-shadow: none;
         }
       }

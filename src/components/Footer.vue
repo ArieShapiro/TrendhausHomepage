@@ -15,7 +15,7 @@ export default {
 
 p{
   text-align: center;
-  border-top: 5px solid yellow;
+  border-top: 1px solid;
   padding: 40px;
 }
 
