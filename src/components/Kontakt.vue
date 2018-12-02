@@ -88,10 +88,11 @@ export default {
   }
   .contact-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
   }
   .contact-left {
     width: 30%;
+        margin-right: 40px;
     .adress {
       margin: 10% 0;
       line-height: 50%;
@@ -108,6 +109,7 @@ export default {
     }
   }
   .contact-right {
+    margin-left: 40px;
     form {
       display: flex;
       flex-direction: column;
