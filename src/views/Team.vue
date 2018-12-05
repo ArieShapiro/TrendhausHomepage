@@ -1,6 +1,6 @@
 <template>
   <section>
-
+    <h1>Hello Team</h1>
   </section>
 </template>
 
@@ -10,6 +10,6 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="scss" scoped>
 
 </style>

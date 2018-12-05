@@ -8,8 +8,8 @@
       <div class="nav-links">
         <a class="nav unternehmen" >Unternehmen</a> 
         <div class="nav unternehmen-dropdown">
-          <a href="#">TEAM</a>
-          <a href="#">AKTUELLES</a>
+          <router-link to="/unternehmen/team">TEAM</router-link>
+          <router-link to="/unternehmen/aktuelles">AKTUELLES</router-link>
         </div>
         <router-link class="nav projekte" to="/about">Projekte</router-link>
         <div class="nav projekte-dropdown">

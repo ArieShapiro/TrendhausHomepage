@@ -30,16 +30,13 @@ import SchlusselZumErfolg from "@/components/SchlusselZumErfolg.vue";
 import AktuelleObjekte from '@/components/AktuelleObjekte.vue';
 import Kontakt from '@/components/Kontakt.vue';
 import Footer from '@/components/Footer.vue';
-import Team from '@/components/Team.vue';
 
 export default {
-  // name: "home",
   components: {
     SchlusselZumErfolg,
     AktuelleObjekte,
     Kontakt,
     Footer,
-    Team
   }
 };
 </script>
