@@ -61,13 +61,16 @@ export default {
   methods: {
     myMap() {
       var mapProp = {
-        center: new google.maps.LatLng(48.2159300, 16.4801521, 15),
+        center: new google.maps.LatLng(48.21593, 16.4801521, 15),
         zoom: 13
       };
-      var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+      var map = new google.maps.Map(
+        document.getElementById("googleMap"),
+        mapProp
+      );
 
       var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(48.2159300, 16.4825521, 15)
+        position: new google.maps.LatLng(48.21593, 16.4825521, 15)
       });
 
       marker.setMap(map);
@@ -92,7 +95,7 @@ export default {
   }
   .contact-left {
     width: 30%;
-        margin-right: 40px;
+    margin-right: 40px;
     .adress {
       margin: 10% 0;
       line-height: 50%;
@@ -136,6 +139,10 @@ export default {
           background-color: #d6cc15;
           box-shadow: none;
         }
+      }
+      input::placeholder,
+      textarea::placeholder {
+        padding-left: 5px;
       }
     }
   }
