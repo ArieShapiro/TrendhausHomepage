@@ -32,7 +32,9 @@
 
 <style>
 * {
-  font-family: "Fjalla One", sans-serif;
+  /* font-family: "Fjalla One", sans-serif; */
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'Lato', sans-serif;
 }
 body {
   margin: 0;
