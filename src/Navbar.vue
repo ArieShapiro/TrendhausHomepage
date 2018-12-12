@@ -1,40 +1,51 @@
 <template>
   <section>
     <div class="navbar-container">
-       <div class="nav-bar animated fadeInDown">
-      <router-link class="nav-logo" to="/">
-        <img src="@/assets/trendhaus-logo.webp" alt="logo">
-      </router-link>
-      <div class="nav-links">
-        <a class="nav unternehmen" >Unternehmen</a> 
-        <div class="nav unternehmen-dropdown">
-          <router-link to="/unternehmen/team">TEAM</router-link>
-          <router-link to="/unternehmen/aktuelles">AKTUELLES</router-link>
+      <div class="nav-bar animated fadeInDown">
+        <router-link class="nav-logo" to="/">
+          <img src="@/assets/trendhaus-logo.webp" alt="logo">
+        </router-link>
+        <div class="nav-links">
+          <router-link class="nav unternehmen" to="/">Unternehmen</router-link>
+          <div class="nav unternehmen-dropdown">
+            <router-link to="/unternehmen/team">TEAM</router-link>
+            <router-link to="/unternehmen/aktuelles">AKTUELLES</router-link>
+          </div>
+          <router-link class="nav projekte" to="/projekte">Projekte</router-link>
+          <div class="nav projekte-dropdown">
+            <router-link to="/projekte/fertiggestellte-projekte">FERTIGGESTELLTE PROJEKTE</router-link>
+            <router-link to="/projekte/projekte-in-bau">PROJEKTE IN BAU</router-link>
+            <router-link to="/projekte/projekte-in-planung">PROJEKTE IN PLANUNG</router-link>
+            <router-link to="/projekte/referenzen">REFERENZEN</router-link>
+          </div>
+          <router-link class="nav" to="/investments">Investments</router-link>
+          <router-link class="nav" to="/partners">Partners</router-link>
+          <a class="nav" href="#contact" @click="onKontakts()">Kontakt</a>
         </div>
-        <router-link class="nav projekte" to="/about">Projekte</router-link>
-        <div class="nav projekte-dropdown">
-          <a href="#">FERTIGGESTELLTE PROJEKTE</a>
-          <a href="#">PROJEKTE IN BAU</a>
-          <a href="#">PROJEKTE IN PLANUNG</a>
-          <a href="#">REFERENZEN</a>
-        </div>
-        <router-link class="nav" to="/about">Investments</router-link>
-        <router-link class="nav" to="/about">Partners</router-link>
-          <a class="nav" href="#contact">Kontakt</a>
       </div>
+      <div class="white-border-bottom"></div>
     </div>
-    <div class="white-border-bottom"></div>
-    </div>      
-    
+
     <router-view/>
-  </section>  
+  </section>
 </template>
+
+<script>
+export default {
+  methods:{
+    onKontakts(){
+      console.log('hi!!!!!!!!!!!!')
+      this.$router.push("/");
+      document.getElementById('contact').scrollIntoView();
+    }
+  }
+}
+</script>
+
 
 <style>
 * {
-  /* font-family: "Fjalla One", sans-serif; */
-  /* font-family: 'Montserrat', sans-serif; */
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 body {
   margin: 0;
@@ -68,7 +79,7 @@ body {
   border-bottom: 5px solid yellow;
   margin: 8px 0 0;
 }
-.white-border-bottom{
+.white-border-bottom {
   height: 8px;
 }
 
