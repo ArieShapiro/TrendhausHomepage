@@ -37,7 +37,7 @@
         <p>oder rufen Sie uns an.</p>
         <p>Wir melden uns so schnell wie möglich bei Ihnen.</p>
 
-        <form action>
+        <form action="/send-mail" method="POST">
           <input type="text" name="name" placeholder="Name" required>
           
           <input type="email" name="email" placeholder="Email Adresse" required>
