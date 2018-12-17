@@ -3,7 +3,7 @@
     <div class="navbar-container">
       <div class="nav-bar animated fadeInDown">
         <router-link class="nav-logo" to="/">
-          <img src="@/assets/trendhaus-logo.webp" alt="logo">
+          <img @click="onLogo()" src="@/assets/trendhaus-logo.webp" alt="logo">
         </router-link>
         <div class="nav-links">
           <router-link class="nav unternehmen" to="/">Unternehmen</router-link>
@@ -32,14 +32,16 @@
 
 <script>
 export default {
-  methods:{
-    onKontakts(){
-      console.log('hi!!!!!!!!!!!!')
+  methods: {
+    onKontakts() {
       this.$router.push("/");
-      document.getElementById('contact').scrollIntoView();
+      document.getElementById("contact").scrollIntoView();
+    },
+    onLogo() {
+      
     }
   }
-}
+};
 </script>
 
 
