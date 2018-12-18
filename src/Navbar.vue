@@ -5,19 +5,26 @@
         <router-link class="nav-logo" to="/">
           <img @click="onLogo()" src="@/assets/trendhaus-logo.webp" alt="logo">
         </router-link>
+
         <div class="nav-links">
           <router-link class="nav unternehmen" to="/">Unternehmen</router-link>
+
+          <!-- 1st Dropdown -->
           <div class="nav unternehmen-dropdown">
             <router-link to="/unternehmen/team">TEAM</router-link>
             <router-link to="/unternehmen/aktuelles">AKTUELLES</router-link>
           </div>
+
           <router-link class="nav projekte" to="/projekte">Projekte</router-link>
+
+          <!-- 2nd Dropdown -->
           <div class="nav projekte-dropdown">
             <router-link to="/projekte/fertiggestellte-projekte">FERTIGGESTELLTE PROJEKTE</router-link>
             <router-link to="/projekte/projekte-in-bau">PROJEKTE IN BAU</router-link>
             <router-link to="/projekte/projekte-in-planung">PROJEKTE IN PLANUNG</router-link>
             <router-link to="/projekte/referenzen">REFERENZEN</router-link>
           </div>
+
           <router-link class="nav" to="/investments">Investments</router-link>
           <router-link class="nav" to="/partners">Partners</router-link>
           <a class="nav" href="#contact" @click="onKontakts()">Kontakt</a>
@@ -33,12 +40,16 @@
 <script>
 export default {
   methods: {
+
     onKontakts() {
       this.$router.push("/");
-      document.getElementById("contact").scrollIntoView();
+      setTimeout(() => {
+        document.getElementById("contact").scrollIntoView(true);
+      }, 1);
     },
+
     onLogo() {
-      
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }
 };
@@ -99,6 +110,7 @@ img {
 
 .nav-links {
   padding: 3%;
+  position: relative;
 }
 
 .unternehmen-dropdown,
@@ -115,12 +127,13 @@ img {
 .unternehmen-dropdown {
   font-size: 1em;
   padding: 0;
-  left: 865px;
+  left: 72px;
+  width: 115px;
 }
 .projekte-dropdown {
-  right: 349px;
+  right: 386px;
   font-size: 1em;
-  width: 195px;
+  width: 165px;
   padding: 0;
 }
 

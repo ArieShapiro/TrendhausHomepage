@@ -1,6 +1,6 @@
 <template>
   <section id="contact">
-    <h1>Contact Section</h1>
+    <h1>Kontakt</h1>
 
     <div class="contact-container">
       <section class="contact-left">
@@ -46,7 +46,7 @@
           
           <textarea type="text" name="message" placeholder="Nachricht"></textarea>
           
-          <input type="submit" value="Senden">
+          <input type="submit" value="Senden" @clikc="onSend()">
         </form>
       </section>
     </div>
@@ -74,6 +74,11 @@ export default {
       });
 
       marker.setMap(map);
+    },
+    onSend() {
+      setTimeout(() => {
+        this.$router.push("/");
+      }, 5000);
     }
   },
   mounted() {
@@ -86,7 +91,7 @@ export default {
 #contact {
   h1 {
     text-align: center;
-    margin: 8%;
+    margin: 7%;
     font-size: 2em;
   }
   .contact-container {
